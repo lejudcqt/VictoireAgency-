@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woof Agency - Agence de Marketing Canin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <nav>
+            <h1>Woof Agency</h1>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#chiens-models">Nos Chiens</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page d'Accueil -->
+    <section id="accueil">
+        <div class="hero">
+            <h2>Agence de Marketing avec des Chiens-Models</h2>
+            <p>Attirez l’attention avec nos ambassadeurs canins.</p>
+            <a href="#services" class="cta">Découvrez nos services</a>
+        </div>
+    </section>
+
+    <!-- Nos Chiens-Models -->
+    <section id="chiens-models">
+        <h2>Nos Chiens-Models</h2>
+        <div class="chiens-gallery">
+            <!-- Exemple d'un chien -->
+            <div class="chien-card">
+                <img src="chien1.jpg" alt="Portrait du chien 1">
+                <h3>Rex</h3>
+                <p>Border Collie, énergique et curieux.</p>
+            </div>
+            <!-- Ajouter d'autres chiens ici -->
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>Nos Services</h2>
+        <div class="services-list">
+            <div class="service">
+                <h3>Campagnes sur les réseaux sociaux</h3>
+                <p>Création de contenu avec nos chiens-modèles pour des campagnes percutantes.</p>
+            </div>
+            <div class="service">
+                <h3>Photographie de produits</h3>
+                <p>Mise en scène de vos produits avec nos ambassadeurs canins.</p>
+            </div>
+            <!-- Ajouter plus de services ici -->
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="temoignages">
+        <h2>Témoignages</h2>
+        <p>Ce que disent nos clients :</p>
+        <div class="temoignages">
+            <blockquote>"Woof Agency a transformé notre campagne Instagram!"</blockquote>
+            <blockquote>"Une équipe professionnelle, des chiens adorables!"</blockquote>
+            <!-- Ajouter plus de témoignages ici -->
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form id="contact-form">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Woof Agency - Tous droits réservés</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5em;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url('hero-image.jpg');
+    height: 70vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 1em;
+}
+
+.cta {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #ff8c00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 2em;
+}
+
+.chiens-gallery, .services-list, .temoignages {
+    display: flex;
+    gap: 2em;
+}
+
+.chien-card, .service, blockquote {
+    background: #f9f9f9;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 500px;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+});
